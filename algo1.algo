@@ -1,0 +1,26 @@
+ALGORITHM checkpoint_algo2
+VAR
+    ch: STRING;
+    c: CHAR;
+    n, m, s: INTEGER;
+BEGIN
+    ch := "";
+    n := 0;
+    m := 0;
+    s := 0;
+
+    WHILE TRUE DO
+        Read(c);
+        IF c = "." THEN
+            EXIT;
+        END_IF
+        ch := ch + c;
+        n := n + 1;
+        IF c = " " THEN
+            m := m + 1;
+        END_IF
+        IF upper(c) IN "AEIOUY" THEN
+            s := s + 1;
+        END_IF
+    END_WHILE
+END
